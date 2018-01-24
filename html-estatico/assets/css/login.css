@@ -1,0 +1,46 @@
+.fullscreen.login{
+    background-image: url(../img/bg-login.png);
+    background-size: cover;
+    background-position: center;
+}
+.login-center{
+    position: absolute;
+    width: 340px;
+    height: 340px;
+
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -170px;
+}
+.box-login{
+    background: #ffffff;
+    padding: 25px 0
+}
+.title-login{
+    font-size: 20px;
+    color: #303F9F;
+    font-family: Calibri;
+    font-weight: 300;
+    margin: 0
+
+}
+.login-header{
+    padding: 0px 25px
+}
+.login-form{
+    padding: 20px 25px
+}
+.login-form .btn{
+    text-transform: initial;
+}
+.login-footer{
+    padding-top: 20px;
+    border-top: 1px solid #303F9F;
+}
+.login-footer p{
+    margin-bottom: 0;
+}
+.login-footer p a{
+    color: #666666;
+}
