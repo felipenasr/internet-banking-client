@@ -39,6 +39,7 @@
 }
 .content-main .row{
     height: 100%;
+    padding: 0 5px;
 }
 
 /* Cards */
