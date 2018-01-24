@@ -1,0 +1,66 @@
+.fullscreen{
+    height: 100vh;
+    width: 100%;
+}
+.header-main{
+    background: #fff;
+    display: block;
+    width: 100%;
+}
+.header-main .row{
+    margin-bottom: 0;
+    height: 110px;
+}
+.header-main .info-conta{
+    padding: 0px 15px;
+}
+.info-conta .info-conta__nome{
+    margin-bottom: 5px;
+    color: #303F9F;
+    font-weight: bold;
+}
+.info-conta .info-conta__numero{
+    margin-bottom: 0px;
+    color: #303F9F;
+}
+.main{
+    height: 100%;
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    transition: .3s
+}
+.main.full{
+    margin-left: 0;
+    width: calc(100% - 0px)
+}
+.content-main{
+    height: calc(100% - 110px);
+    background: #f0f0f0;
+}
+.content-main .row{
+    height: 100%;
+}
+
+/* Cards */
+.card{
+    background: #303F9F;
+    text-align: center;
+    color: #fff;
+    height: 180px
+}
+.card.texto p {
+    margin-bottom: 0;
+}
+/* Icons */
+.icon{
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 20px auto 15px;
+}
+.icon.transferencia{
+    background: url(../img/icons/transferencias-64x64.png) center no-repeat;
+}
+.icon.extrato{
+    background: url(../img/icons/extratos-64x64.png) center no-repeat;
+}
