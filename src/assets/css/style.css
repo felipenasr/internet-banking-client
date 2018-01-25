@@ -10,11 +10,15 @@
     width: 100%;
 }
 .header-main{
-    background-image: url(../img/header_bg.png);
+    /* background-image: url(../img/header_bg.png); */
     background-repeat: repeat-x;
     width: 100%;
     padding-right: 30px;
     padding-left: 30px;
+    background: #fdfdfd;
+    -webkit-box-shadow: -1px 0px 18px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 0px 18px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 0px 18px -1px rgba(0,0,0,0.75);
 }
 .header-main .row{
     margin-bottom: 0;
@@ -141,3 +145,8 @@
     background: url(../img/icons/dashboard-24x24.png);
 }
 
+@media(min-width: 768px) {
+.content-main {
+    padding: 0 35px;
+}
+}

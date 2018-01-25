@@ -1,0 +1,16 @@
+#formTransfer input {
+    border: 1px solid #3f51b5;
+    border-radius: 0;
+}
+
+#formTransfer label {
+    font-weight: 500;
+    color: #3f51b5;
+}
+
+#formTransfer button {
+    border-radius: 0;
+    background: #303F9F;
+    border-color: #303F9F;
+    margin: 15px 0;
+}
