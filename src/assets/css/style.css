@@ -77,6 +77,24 @@
     color: #fff;
     height: 180px
 }
+
+.card-receipt{
+    width: 370px;
+}
+
+.card-receipt-text{
+    width: 80%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card-receipt-title{
+    width: 80%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
 .card.texto p {
     margin-bottom: 0;
 }
