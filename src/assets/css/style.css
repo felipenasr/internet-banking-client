@@ -26,12 +26,24 @@
 .main{
     height: 100%;
     margin-left: 240px;
-    width: calc(100% - 240px);
+    width: calc(100% - 255px);
     transition: .3s
 }
 .main.full{
     margin-left: 0;
     width: calc(100% - 0px)
+}
+@media (max-width: 640px) {
+    .main{
+        height: 100%;
+        margin-left: 0px;
+        width: calc(100% - 10px);
+        transition: .3s
+    }
+    .main.full{
+        margin-left: 0;
+        width: calc(100% - 30px)
+    }
 }
 .content-main{
     height: calc(100% - 110px);
