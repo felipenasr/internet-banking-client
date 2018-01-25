@@ -16,6 +16,7 @@ import { ApiService } from './shared/services/api.service'
 import { LocalStorageService } from './shared/services/local-storage.service';
 import { ExtractComponent } from './extract/extract.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ComprovanteComponent } from './transfer/comprovante/comprovante.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ConfirmComponent,
     HeaderComponent,
     SidenavComponent,
-    ExtractComponent
+    ExtractComponent,
+    ComprovanteComponent
   ],
   imports: [
     BrowserModule,
