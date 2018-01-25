@@ -1,5 +1,5 @@
 .fullscreen.login{
-    background-image: url(../img/bg-login.png);
+    background-image: url(../img/bg-login.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -15,7 +15,7 @@
 }
 .box-login{
     background: #ffffff;
-    padding: 25px 0
+    padding: 25px 0 
 }
 .title-login{
     font-size: 20px;
