@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .fullscreen.login{
     background-image: url(../img/bg-login.jpg);
     background-size: cover;
