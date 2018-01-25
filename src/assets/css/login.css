@@ -5,10 +5,16 @@
 }
 
 .fullscreen.login{
-    background-image: url(../img/bg-login.png);
+    background-image: url(../img/bg-login.jpg);
     background-size: cover;
     background-position: center;
 }
+fullscreen.login .color{
+    background: #303f9fb8;
+    width: 100%;
+    height: 100%;
+}
+
 .login-center{
     position: absolute;
     width: 340px;
