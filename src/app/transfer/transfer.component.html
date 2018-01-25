@@ -3,30 +3,42 @@
   <app-header></app-header>
   <section class="content-main">
     <div class="row justify-content-center align-items-center">
+<<<<<<< HEAD
       <form action="" id="formTransfer" class="col-md-12">
         <div class=" justify-content-center align-items-center">
           <div class="row col-lg-12">
             <div class="col-sm-6 col-xs-12 p-3">
+=======
+      <form #form="ngForm" action="" id="formTransfer" class="col-md-6">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md">
+            <div class="col-sm-12">
+>>>>>>> a5d00a75d1fa612a59c5b12c012402ed5db4a4b7
               <label for="numContaOrigem">Número da conta de origem: </label>
-              <input type="text" id="numContaOrigem" name="numContaOrigem" class="col-sm form-control" placeholder="Conta Origem">
+              <input type="text" id="numContaOrigem" name="numContaOrigem" class="col-sm form-control" placeholder="Conta Origem" required>
             </div>
             <hr>
             <div class="col-sm-6 col-xs-12 p-3">
               <label for="numContaDestino">Número da conta de destino: </label>
-              <input type="text" id="numContaDestino" name="numContaDestino" class="col-sm form-control" placeholder="Conta Destino">
+              <input type="text" id="numContaDestino" name="numContaDestino" class="col-sm form-control" placeholder="Conta Destino" required>
             </div>
             <hr>
             </div>
             <div class="row col-lg-12">
             <div class="col-sm-6 col-xs-12 p-3">
               <label for="dataTransfer">Data da Transferencia</label>
-              <input type="text" id="dataTransfer" name="dataTransfer" class="col-sm form-control" placeholder="DD/MM/AAAA">
+              <input type="text" id="dataTransfer" name="dataTransfer" class="col-sm form-control" placeholder="DD/MM/AAAA" pattern="\d{1,2}/\d{1,2}/\d{4}"
+                required>
             </div>
             <hr>
             <div class="col-sm-6 col-xs-12 p-3">
               <label for="valorTransfer">Valor da Transferência</label>
+<<<<<<< HEAD
               <input type="text" id="valorTransfer" name="valorTransfer" class="col-sm form-control" placeholder="Valor em R$">
               <button class="btn btn-primary btn-submit float-right mb-4">Avançar</button>
+=======
+              <input type="text" id="valorTransfer" name="valorTransfer" class="col-sm form-control" placeholder="Valor em R$" required>
+>>>>>>> a5d00a75d1fa612a59c5b12c012402ed5db4a4b7
             </div>
           </div>
         </div>
@@ -34,9 +46,18 @@
       </form>
     </div>
 
+<<<<<<< HEAD
     <!-- <div class="row justify-content-center align-items-center">
       <div class="col-md">
         
+=======
+    <div class="row justify-content-center align-items-center" style="height: 50px;">
+      <div class="col-md">
+        <a routerLink="/comprovante">
+          <button class="btn btn-primary btn-submit float-right mr-3" disabled="!form.valid">Avançar</button>
+        </a>
+        <button class="btn btn-secondary float-right mr-3">Voltar</button>
+>>>>>>> a5d00a75d1fa612a59c5b12c012402ed5db4a4b7
       </div>
     </div> -->
 
