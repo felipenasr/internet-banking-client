@@ -1,0 +1,33 @@
+#extractTable {
+    padding: 25px 0;
+}
+
+#extractTable .nav-link.active {
+    border-radius: 0;
+    background: #303f9f;
+    margin: 10px 0;
+    color: #fff;
+}
+
+#extractTable .nav-link{
+    border-radius: 0;
+    color: #303f9f;
+    margin: 10px 0;
+}
+
+#extractTable .list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #303f9f;
+    border-color: #303f9f;
+}
+
+.icon-extract {
+    margin: 5px;
+}
+
+#extractTable .btnVoltar {
+    margin: 20px;
+    padding:10px;
+    border-radius: 0;
+}
