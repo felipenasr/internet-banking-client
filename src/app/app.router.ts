@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component'
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { TransferComponent } from './transfer/transfer.component'
 import { ExtractComponent } from './extract/extract.component';
+import { ReceiptComponent } from './receipt/receipt.component';
 
 const rotasApp: Routes = [
     { path: '', component: LoginComponent},
@@ -11,6 +12,7 @@ const rotasApp: Routes = [
     { path: 'dashboard', component: DashboardComponent },
     { path: 'transfer', component: TransferComponent },
     { path: 'extract', component: ExtractComponent },
+    { path: 'receipt', component: ReceiptComponent },
     { path: '**', redirectTo: '/' }
 ]
 
