@@ -77,3 +77,27 @@
 .icon.extrato{
     background: url(../img/icons/extratos-64x64.png) center no-repeat;
 }
+.icon-extract{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: url(../img/icons/extratos-24x24.png);
+}
+.icon-transfer{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+    display: inline-block;
+    background: url(../img/icons/transferencias-24x24.png);
+}
+.icon-dash{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: url(../img/icons/dashboard-24x24.png);
+}
