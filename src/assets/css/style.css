@@ -144,6 +144,15 @@
     margin-right: 10px;
     background: url(../img/icons/dashboard-24x24.png);
 }
+.icon-exit{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: url(../img/icons/exit-24x24.png);
+}
+
 
 @media(min-width: 768px) {
 .content-main {
