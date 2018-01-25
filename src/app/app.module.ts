@@ -11,7 +11,8 @@ import { HeaderComponent } from './shared/header/header.component'
 import { SidenavComponent } from './shared/sidenav/sidenav.component'
 
 import { ApiService } from './shared/services/api.service'
-import { LocalStorageService } from './shared/services/local-storage.service'
+import { LocalStorageService } from './shared/services/local-storage.service';
+import { ExtractComponent } from './extract/extract.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LocalStorageService } from './shared/services/local-storage.service'
     DashboardComponent,
     TransferComponent,
     HeaderComponent,
-    SidenavComponent
+    SidenavComponent,
+    ExtractComponent
   ],
   imports: [
     BrowserModule,
