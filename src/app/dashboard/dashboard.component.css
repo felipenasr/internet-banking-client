@@ -1,0 +1,12 @@
+.card:hover .card-body,
+.card:focus .card-body{
+    background: #3F51B5;
+    box-shadow: 0px 0px 20px #666;
+    transition: .3s ease-in-out;
+    cursor: pointer
+}
+.card-body{
+    color: #fff;
+    font-weight: bold;
+
+}
