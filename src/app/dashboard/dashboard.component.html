@@ -1,56 +1,32 @@
-<div class="fullscreen">
-  <section class="sidebar-menu">
-      <header class="header-navigation">
-          <a href="/dashboard"><h1 class="logo">Bank</h1></a>
-      </header>
-      <nav class="nav-navigation">
-          <ul>
-              <li><a href="/dashboard">Dashboard</a></li>
-              <li><a href="/transfers">Transferências</a></li>
-              <li><a href="/extract">Extratos</a></li>
-          </ul>
-      </nav>
+<app-sidenav></app-sidenav>
+<main class="main">
+  <app-header></app-header>
+  <section class="content-main">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <i class="icon transferencia"></i>
+            Transferências 
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <i class="icon extrato"></i>
+            Extratos
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card d-flex justify-content-center texto">
+          <div class="card-body text-left">
+            <p><small>Conta Corrente</small></p>    
+            <p><span class="moeda">R$</span> 2500,00</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  <main class="main">
-      <header class="header-main">
-          <div class="row justify-content-end align-items-center">
-              <button class="btn btn-sidebar">
-                  Toggle Sidebar
-              </button>
-              <div class="info-conta">
-                  <p class="info-conta__nome">Rita Lino</p>
-                  <p class="info-conta__numero">Conta: 00000-0</p>
-              </div>
-          </div>
-      </header>
-      <section class="content-main">
-          <div class="row justify-content-center align-items-center">
-                  <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="card">
-                          <div class="card-body">
-                              <i class="icon transferencia"></i>
-                              Transferências 
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="card">
-                          <div class="card-body">
-                              <i class="icon extrato"></i>
-                              Extratos
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="card d-flex justify-content-center texto">
-                          <div class="card-body text-left">
-                             <p><small>Conta Corrente</small></p>    
-                             <p><span class="moeda">R$</span> 2500,00</p>
-                          </div>
-                      </div>
-                  </div>
-          </div>
-      </section>
-  </main>
-  <div class="overlay"></div>
-</div>
+</main>

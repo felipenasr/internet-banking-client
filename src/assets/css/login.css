@@ -18,10 +18,10 @@
     padding: 25px 0
 }
 .title-login{
-    font-size: 20px;
+    font-size: 28px;
     color: #303F9F;
     font-family: Calibri;
-    font-weight: 300;
+    font-weight: 500;
     margin: 0
 
 }
@@ -42,5 +42,6 @@
     margin-bottom: 0;
 }
 .login-footer p a{
-    color: #666666;
+    color: #303F9F;
+    text-decoration: underline;
 }

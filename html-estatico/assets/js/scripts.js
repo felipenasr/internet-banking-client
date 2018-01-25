@@ -4,3 +4,4 @@ $('.hamburguer').on('click', function () {
     $(this).toggleClass('open');
     $('.main').toggleClass('full');
 });
+
