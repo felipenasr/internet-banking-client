@@ -14,7 +14,10 @@
 }
 .box-login{
     background: #ffffff;
-    padding: 25px 0
+    padding: 25px 0;
+    -webkit-box-shadow: -1px 0px 18px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 0px 18px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 0px 18px -1px rgba(0,0,0,0.75);
 }
 .title-login{
     font-size: 28px;
@@ -43,6 +46,9 @@
 }
 .login-form .btn{
     text-transform: initial;
+    border-radius: 0;
+    background: #303F9F;
+    border-color: #303F9F;
 }
 .login-footer{
     padding-top: 20px;
