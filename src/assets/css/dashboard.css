@@ -58,4 +58,14 @@
 }
 .sidebar-menu nav li{
     float: none;
+    list-style: none;
+    padding: 5px 0;
+}
+.sidebar-menu nav li:hover{
+    border-right: 6px solid #159588;
+}
+
+.sidebar-menu nav li a{
+    color: #FFFFFF;
+    text-decoration: none;
 }
