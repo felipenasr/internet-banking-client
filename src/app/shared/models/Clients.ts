@@ -1,13 +1,16 @@
 export class Clients {
 
     constructor(
-        public account_number: String='',
-        public name: String="", 
-        public gender: String="",
-        public birth: String="",
-        public email: String="",
-        public balance: Number=0
-        
-    ){
-    }
+        public _id: Number = 0,
+        public account_number: String = '',
+        public name: String =  '',
+        public alias: String = '',
+        public gender: String = '',
+        public birth: String = '',
+        public cpf: String = '',
+        public email: String = '',
+        public token: String = '',
+        public balance: Number = 0
+    ) {}
 }
+

@@ -49,6 +49,11 @@
     margin-left: 0;
     width: calc(100% - 0px)
 }
+.form-control-feedback p {
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+}
 
 @media(max-width: 992px){
     .main{

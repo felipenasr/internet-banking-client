@@ -15,6 +15,7 @@ import { SidenavComponent } from './shared/sidenav/sidenav.component'
 import { ApiService } from './shared/services/api.service'
 import { LocalStorageService } from './shared/services/local-storage.service';
 import { ExtractComponent } from './extract/extract.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,8 @@ import { ExtractComponent } from './extract/extract.component'
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RotasModule
   ],
   providers: [

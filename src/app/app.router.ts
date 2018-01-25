@@ -13,6 +13,7 @@ const rotasApp: Routes = [
     { path: 'dashboard', component: DashboardComponent },
     { path: 'transfer', component: TransferComponent },
     { path: 'extract', component: ExtractComponent },
+    { path: 'extract/:id' component: ExtractComponent}
     { path: 'receipt', component: ReceiptComponent },
     { path: 'confirm', component: ConfirmComponent },
     { path: '**', redirectTo: '/' }
