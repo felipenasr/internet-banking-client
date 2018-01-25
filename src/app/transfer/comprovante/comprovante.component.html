@@ -1,3 +1,44 @@
-<p>
-  comprovante works!
-</p>
+<app-sidenav></app-sidenav>
+<main class="main">
+  <app-header></app-header>
+  <section class="container-fluid content-main">
+    <div class="row justify-content-center align-items-center">
+
+      <div class="col-sm-10">
+        <div class="list-group">
+          <div class="list-group-item list-group-item-action active">
+            <div class="row">
+              <div class="col-3 col-sm-2">
+                Comprovante de Transferência
+              </div>
+            </div>
+          </div>
+          <div *ngFor="let transfer of listaTransfers" class="list-group-item list-group-item-action">
+            <div class="row">
+              <div class="col-3 col-sm-2">
+                <span class="dataTrans">
+                  {{transfer.dia}}
+                  <br> {{transfer.mes}}
+                </span>
+              </div>
+              <div class="col-6 col-sm-7">
+                <h5 class="nomeTrans">{{transfer.origem}}</h5>
+                <p class="formaTrans">{{transfer.tipo}}</p>
+              </div>
+              <div class="col-3">
+                <div class="valorTrans">
+                  <span class="moeda">R$ {{transfer.valor}},00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+      <a [routerLink]="['/dashboard']" class="btn btn-secondary col-sm-3">Voltar</a>
+    </div>
+  </section>
+
+</main>

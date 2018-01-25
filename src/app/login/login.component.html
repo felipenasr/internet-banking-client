@@ -6,7 +6,7 @@
                   <h1 class="logo">GamaBank</h1>
                   <h4 class="title-login text-center">Entrar</h4>
               </header>
-              <form class="login-form" id="formLogin" [formGroup]="myform" novalidate>
+              <form #formLogin="ngForm" class="login-form" id="formLogin" [formGroup]="myform" novalidate>
                 <div class="form-group" [ngClass]="{
                   'has-danger': cpf.invalid && (cpf.dirty || cpf.touched),
                   'has-success': cpf.valid && (cpf.dirty || cpf.touched)
