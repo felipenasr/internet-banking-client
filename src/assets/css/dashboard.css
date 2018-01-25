@@ -26,12 +26,14 @@
 .header-navigation a .logo{
     font-size: 0;
     line-height: 80px;
-    margin: 0;
-    background-image: url(../img/logo.png);
+    margin: 0px 10px 0px 10px;
+    background-image: url(../img/gamabank_logo_branco.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
 .sidebar-menu nav{
     background: transparent;
 }
