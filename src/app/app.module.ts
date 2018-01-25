@@ -6,6 +6,8 @@ import { AppComponent } from './app.component'
 import { LoginComponent } from './login/login.component'
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { TransferComponent } from './transfer/transfer.component'
+import { ReceiptComponent } from './receipt/receipt.component'
+import { ConfirmComponent } from './confirm/confirm.component'
 
 import { HeaderComponent } from './shared/header/header.component'
 import { SidenavComponent } from './shared/sidenav/sidenav.component'
@@ -20,6 +22,8 @@ import { ExtractComponent } from './extract/extract.component'
     LoginComponent,
     DashboardComponent,
     TransferComponent,
+    ReceiptComponent,
+    ConfirmComponent,
     HeaderComponent,
     SidenavComponent,
     ExtractComponent
