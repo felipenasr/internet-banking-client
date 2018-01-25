@@ -60,9 +60,14 @@
     color: #fff;
     height: 180px
 }
+.card a{
+    color: #fff;
+    text-decoration: none;
+}
 .card.texto p {
     margin-bottom: 0;
 }
+
 /* Icons */
 .icon{
     display: block;

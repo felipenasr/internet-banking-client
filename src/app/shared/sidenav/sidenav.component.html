@@ -6,9 +6,10 @@
   </header>
   <nav class="nav-navigation">
     <ul>
-      <li><a href="/dashboard">Dashboard</a></li>
-      <li><a href="/transfers">Transferências</a></li>
-      <li><a href="/extract">Extratos</a></li>
+      <li><a [routerLink]="['/dashboard']">Dashboard</a></li>
+      <li><a [routerLink]="['/transfer']">Transferências</a></li>
+      <li><a [routerLink]="['/extract']">Extratos</a></li>
+      <li><a [routerLink]="['/login']">Sair</a></li>
     </ul>
   </nav>
 </section>
