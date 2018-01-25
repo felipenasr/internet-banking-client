@@ -8,22 +8,22 @@
           <div class="col-md">
             <div class="col-sm-12">
               <label for="numContaOrigem">Número da conta de origem: </label>
-              <input type="text" id="numContaOrigem" name="numContaOrigem" class="col-sm form-control" placeholder="Conta Origem">
+              <input type="text" id="numContaOrigem" name="numContaOrigem" class="col-sm form-control" placeholder="Conta Origem" required>
             </div>
             <hr>
             <div class="col-sm-12 p-3">
               <label for="numContaDestino">Número da conta de destino: </label>
-              <input type="text" id="numContaDestino" name="numContaDestino" class="col-sm form-control" placeholder="Conta Destino">
+              <input type="text" id="numContaDestino" name="numContaDestino" class="col-sm form-control" placeholder="Conta Destino" required>
             </div>
             <hr>
             <div class="col-sm-12 p-3">
               <label for="dataTransfer">Data da Transferencia</label>
-              <input type="text" id="dataTransfer" name="dataTransfer" class="col-sm form-control" placeholder="DD/MM/AAAA">
+              <input type="text" id="dataTransfer" name="dataTransfer" class="col-sm form-control" placeholder="DD/MM/AAAA" pattern="\d{1,2}/\d{1,2}/\d{4}" required>
             </div>
             <hr>
             <div class="col-sm-12 p-3">
               <label for="valorTransfer">Valor da Transferência</label>
-              <input type="text" id="valorTransfer" name="valorTransfer" class="col-sm form-control" placeholder="Valor em R$">
+              <input type="text" id="valorTransfer" name="valorTransfer" class="col-sm form-control" placeholder="Valor em R$" required>
             </div>
           </div>
         </div>
