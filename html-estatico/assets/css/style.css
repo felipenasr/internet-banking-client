@@ -33,6 +33,19 @@
     margin-left: 0;
     width: calc(100% - 0px)
 }
+
+@media(max-width: 992px){
+    .main{
+        height: 100%;
+        margin-left: 0px;
+        width: calc(100% - 0px);
+        transition: .3s
+    }
+    .main.full{
+        margin-left: 0px;
+        width: calc(100% - 00px)
+    }
+}
 .content-main{
     height: calc(100% - 110px);
     background: #f0f0f0;
