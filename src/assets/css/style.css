@@ -10,9 +10,11 @@
     width: 100%;
 }
 .header-main{
-    background: #fff;
-    display: block;
+    background-image: url(../img/header_bg.png);
+    background-repeat: repeat-x;
     width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 .header-main .row{
     margin-bottom: 0;
@@ -30,6 +32,13 @@
     margin-bottom: 0px;
     color: #303F9F;
 }
+.line-bar{
+    font-size: 0;
+    line-height: 80px;
+    width: 1px;
+    background-color: #303F9F;
+}
+
 .main{
     height: 100%;
     margin-left: 240px;
@@ -108,3 +117,4 @@
     margin-right: 10px;
     background: url(../img/icons/dashboard-24x24.png);
 }
+
