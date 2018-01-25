@@ -61,6 +61,9 @@
     list-style: none;
     padding: 5px 0;
 }
+.sidebar-menu nav ul{
+    margin-top: 10px;
+}
 .sidebar-menu nav li:hover{
     border-right: 6px solid #159588;
 }
