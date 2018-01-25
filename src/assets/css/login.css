@@ -7,10 +7,9 @@
     position: absolute;
     width: 340px;
     height: 340px;
-
     top: 50%;
     left: 50%;
-    margin-top: -170px;
+    margin-top: -210px;
     margin-left: -170px;
 }
 .box-login{
@@ -28,6 +27,19 @@
 .login-header{
     padding: 0px 25px
 }
+
+.logo{
+    font-size: 0;
+    line-height: 80px;
+    margin: 0px 10px 0px 10px;
+    background-image: url(../img/gamabank_logo_azul.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
 .login-form{
     padding: 20px 25px
 }
