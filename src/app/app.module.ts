@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { RotasModule } from './app.router'
 
 import { AppComponent } from './app.component'
@@ -12,11 +15,14 @@ import { ConfirmComponent } from './confirm/confirm.component'
 import { HeaderComponent } from './shared/header/header.component'
 import { SidenavComponent } from './shared/sidenav/sidenav.component'
 
-import { ApiService } from './shared/services/api.service'
-import { LocalStorageService } from './shared/services/local-storage.service';
 import { ExtractComponent } from './extract/extract.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComprovanteComponent } from './transfer/comprovante/comprovante.component';
+
+import { AuthService } from "./shared/services/auth.service";
+import { JwtTokenService } from "./shared/services/jwt.service";
+import { ApiService } from './shared/services/api.service'
+import { LocalStorageService } from './shared/services/local-storage.service';
 
 @NgModule({
   declarations: [
@@ -35,11 +41,14 @@ import { ComprovanteComponent } from './transfer/comprovante/comprovante.compone
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RotasModule
+    RotasModule,
+    HttpClientModule
   ],
   providers: [
     ApiService,
-    LocalStorageService
+    LocalStorageService,
+    AuthService,
+    JwtTokenService
   ],
   bootstrap: [AppComponent]
 })

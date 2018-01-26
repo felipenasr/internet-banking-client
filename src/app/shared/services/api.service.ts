@@ -1,13 +1,18 @@
 import { Injectable } from "@angular/core";
-import { Http } from "@angular/http";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import "rxjs/add/operator/toPromise";
 import { environment } from "../../../environments/environment";
 
 @Injectable()
 export class ApiService {
     constructor(
-        private http: Http
+        private http: HttpClient
     ){}
+    
+    header = new HttpHeaders({
+        'Content-Type': 'application/json'
+    });
+
     private api_url = environment.url_api;
 
     get(route){
@@ -15,7 +20,7 @@ export class ApiService {
     }
 
     post(route, object){
-        return this.http.post(`${this.api_url}/${route}`, object).toPromise();
+        return this.http.post(`${this.api_url}/${route}`, object, {headers: this.header});
     }
     update(route, object){
         return this.http.put(`${this.api_url}/${route}`, object).toPromise();
