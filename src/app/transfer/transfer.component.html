@@ -3,7 +3,7 @@
   <app-header></app-header>
   <section class="content-main">
     <div class="row justify-content-center align-items-center">
-      <form action="" id="formTransfer" class="col-md-12">
+      <form #formTranfer="ngForm" action="" id="formTransfer" class="col-md-12">
         <div class=" justify-content-center align-items-center">
           <div class="row col-lg-12">
             <div class="col-sm-6 col-xs-12 p-3">
@@ -39,6 +39,7 @@
                     class="col-sm form-control"
                     placeholder="Valor em R$">
               <button (click)="newTransfer()" class="btn btn-primary btn-submit float-right mb-4">Avançar</button>
+
             </div>
           </div>
         </div>
