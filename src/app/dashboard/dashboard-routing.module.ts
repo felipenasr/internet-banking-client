@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component'
 
 const dashboardRoutes: Routes = [
     { path: '', component: DashboardComponent, children: [
-        { path: '', component: HomeComponent }
+        { path: '', component: HomeComponent },
         { path: 'transfer', component: TransferComponent },
         { path: 'comprovante', component: ComprovanteComponent },
         { path: 'extract', component: ExtractComponent },
