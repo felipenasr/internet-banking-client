@@ -8,6 +8,7 @@ import { LoginResponse } from "../shared/models/LoginResponse";
 import { ApiService } from "../shared/services/api.service";
 import { AuthService } from "../shared/services/auth.service";
 import { JwtTokenService } from "../shared/services/jwt.service";
+import { CpfMaskDirective } from "./cpf-mask.directive";
 
 @Component({
   selector: 'app-login',

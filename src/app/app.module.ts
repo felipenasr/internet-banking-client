@@ -23,6 +23,7 @@ import { AuthService } from "./shared/services/auth.service";
 import { JwtTokenService } from "./shared/services/jwt.service";
 import { ApiService } from './shared/services/api.service'
 import { LocalStorageService } from './shared/services/local-storage.service';
+import { CpfMaskDirective } from './login/cpf-mask.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LocalStorageService } from './shared/services/local-storage.service';
     HeaderComponent,
     SidenavComponent,
     ExtractComponent,
-    ComprovanteComponent
+    ComprovanteComponent,
+    CpfMaskDirective
   ],
   imports: [
     BrowserModule,
