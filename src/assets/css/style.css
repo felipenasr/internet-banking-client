@@ -84,7 +84,8 @@
     background: #303F9F !important;
     text-align: center;
     color: #fff;
-    height: 180px
+    height: 180px;
+    margin-top: 200px;
 }
 
 .card-receipt{
