@@ -81,7 +81,7 @@
 
 /* Cards */
 .card{
-    background: #303F9F;
+    background: #303F9F !important;
     text-align: center;
     color: #fff;
     height: 180px
