@@ -1,6 +1,4 @@
-<app-sidenav></app-sidenav>
-<main class="main">
-  <app-header></app-header>
+
     <section id="extractTable" class="container-fluid content-main">
         <div class="row justify-content-center align-items-center">
             <div class="col-sm-10">
@@ -37,7 +35,7 @@
                             </div>
                         </div>
                     </div>
-                    <div *ngFor="let transfer of listaTransfers" 
+                    <!-- <div *ngFor="let transfer of listaTransfers" 
                           class="list-group-item list-group-item-action">
                         <div class="row">
                             <div class="col-3 col-sm-2">
@@ -52,12 +50,12 @@
                             <div class="col-3">
                                 <div class="valorTrans">
                                     <img src="./assets/img/icons/debit.png" class="img-fluid icon-extract">
-                                    <!-- <img src="./assets/img/icons/credit.png" class="img-fluid icon-extract"> -->
+                                    <img src="./assets/img/icons/credit.png" class="img-fluid icon-extract">
                                     <span class="moeda">R$ {{transfer.valor}},00</span>
                                 </div>     
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
                     
@@ -66,5 +64,3 @@
             <a [routerLink]="['/dashboard']" class="btn btn-secondary col-sm-3 btnVoltar">Voltar</a> 
         </div>
     </section>
-
-</main>
