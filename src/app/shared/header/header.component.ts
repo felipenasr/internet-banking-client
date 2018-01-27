@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
   }
 
   getUser(){
-    let token = {token: this.jwt.getToken())}
+    let token = {token: this.jwt.getToken()}
     this.http.post(this._url, token)
         .subscribe((res: UserResponse) => {
           this.user_info = res;
