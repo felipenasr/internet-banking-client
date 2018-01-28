@@ -1,4 +1,4 @@
-<section class="sidebar-menu">
+<section class="sidebar-menu" [ngClass]="{'full' : isFull}">
     <header class="header-navigation">
         <a [routerLink]="['/dashboard']"><h1 class="logo">Bank</h1></a>
     </header>
@@ -10,7 +10,7 @@
             <li (click)="logout()"><a href=""><i class="icon-exit"></i>Sair</a></li>
         </ul>
     </nav>
-    <div class="hamburguer mt-5">
+    <div class="hamburguer mt-5" (click)="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
