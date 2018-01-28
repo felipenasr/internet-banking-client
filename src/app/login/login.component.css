@@ -49,11 +49,17 @@
 .login-form{
     padding: 20px 25px
 }
+
+.login-form input {
+    border-radius: 0;
+}
+
 .login-form .btn{
     text-transform: initial;
     border-radius: 0;
     background: #303F9F;
     border-color: #303F9F;
+    margin-top: 8px;
 }
 .login-footer{
     padding-top: 20px;
