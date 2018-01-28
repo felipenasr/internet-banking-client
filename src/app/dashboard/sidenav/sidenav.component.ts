@@ -25,4 +25,12 @@ export class SidenavComponent implements OnInit {
     this.isFull = bool === false ? true : false;
   }
 
+  getStyle() {
+    if (this.isFull === false) {
+      return '#303F9F'
+    } else {
+      return '#FFFFFF'
+    }
+  }
+
 }

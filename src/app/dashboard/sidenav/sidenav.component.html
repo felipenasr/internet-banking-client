@@ -10,10 +10,10 @@
             <li (click)="logout()"><a href=""><i class="icon-exit"></i>Sair</a></li>
         </ul>
     </nav>
-    <div class="hamburguer mt-5" (click)="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div id="toggle-nav" class="hamburguer mt-5" (click)="toggleMenu()">
+        <span [style.background-color]="getStyle()"></span>
+        <span [style.background-color]="getStyle()"></span>
+        <span [style.background-color]="getStyle()"></span>
     </div>
 </section>
 <div class="overlay" [ngClass]="{'full' : isFull}"></div>

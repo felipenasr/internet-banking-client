@@ -43,6 +43,8 @@ export class LoginComponent implements OnInit {
       pass: this.senha.value
     };
     
+    // this.router.navigate(['/dashboard']);   
+    
     this.http.post(this.api_url, user)
         .subscribe((res: LoginResponse) =>{
           if(!res.error){
