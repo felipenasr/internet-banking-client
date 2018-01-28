@@ -5,8 +5,8 @@
     <nav class="nav-navigation">
         <ul>
             <!-- <li routerLinkActive="active"><a routerLink="/dashboard"><i class="icon-dash"></i>Dashboard</a></li> -->
-            <li routerLinkActive="active"><a routerLink="/dashboard/transfer"><i class="icon-transfer"></i>Transferências</a></li>
-            <li routerLinkActive="active"><a routerLink="/dashboard/extract"><i class="icon-extract"></i>Extratos</a></li>
+            <li (click)="toggleMenu()" routerLinkActive="active"><a routerLink="/dashboard/transfer"><i class="icon-transfer"></i>Transferências</a></li>
+            <li (click)="toggleMenu()" routerLinkActive="active"><a routerLink="/dashboard/extract"><i class="icon-extract"></i>Extratos</a></li>
             <li (click)="logout()"><a href=""><i class="icon-exit"></i>Sair</a></li>
         </ul>
     </nav>
