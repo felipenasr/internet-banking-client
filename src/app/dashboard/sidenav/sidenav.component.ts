@@ -22,7 +22,7 @@ export class SidenavComponent implements OnInit {
   isFull = false  
   toggleMenu(){
     let bool = this.isFull
-    this.isFull = bool === false ? true : false;   
+    this.isFull = bool === false ? true : false;
   }
 
 }
