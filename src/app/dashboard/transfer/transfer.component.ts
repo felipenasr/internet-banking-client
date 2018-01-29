@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Transfers } from "../shared/models/Transfers";
+import { Transfers } from '../../shared/models/Transfers'
 
-import { ApiService } from "../shared/services/api.service";
-import { JwtTokenService } from "../shared/services/jwt.service";
+import { ApiService } from '../../shared/services/api.service'
+import { JwtTokenService } from '../../shared/services/jwt.service'
 
 @Component({
   selector: 'app-transfer',

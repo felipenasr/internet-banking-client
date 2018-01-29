@@ -11,7 +11,7 @@
                   'has-danger': cpf.invalid && (cpf.dirty || cpf.touched),
                   'has-success': cpf.valid && (cpf.dirty || cpf.touched)
                  }">
-                  <input type="text" placeholder="CPF" id="cpf" class="form-control" formControlName="cpf" maxlength="14">
+                  <input type="text" placeholder="CPF" id="cpf" class="form-control" formControlName="cpf" maxlength="14" [(ngModel)]="appCpfMask" appCpfMask="999.999.999-99">
                   <div class="form-control-feedback"
                     *ngIf="cpf.errors && (cpf.dirty || cpf.touched)">
                     <p *ngIf="cpf.errors.required">Digite o CPF</p>
@@ -46,9 +46,9 @@
                 <button class="btn btn-primary pull-right col-sm-12"
                   (click)="login()" [disabled]="!myform.valid">Login</button>
               </form>
-              <footer class="login-footer">
-                  <p class="text-center">Esqueceu sua senha? <a href="/signup">Clique aqui</a></p>
-              </footer>
+              <!-- <footer class="login-footer">
+                  <p class="text-center">Esqueceu sua senha? <a routerLink="/dashboard">Clique aqui</a></p>
+              </footer> -->
           </section>
   </main>
 </div>

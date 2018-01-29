@@ -1,3 +1,12 @@
+/* 
+
+-- Main
+-- Callbacks
+-- Icons
+-- Media Queries
+-- Toast
+
+*/
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
 
@@ -9,40 +18,8 @@
     height: 100vh;
     width: 100%;
 }
-.header-main{
-    /* background-image: url(../img/header_bg.png); */
-    background-repeat: repeat-x;
-    width: 100%;
-    padding-right: 30px;
-    padding-left: 30px;
-    background: #fdfdfd;
-    -webkit-box-shadow: -1px 0px 18px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 0px 18px -1px rgba(0,0,0,0.75);
-    box-shadow: -1px 0px 18px -1px rgba(0,0,0,0.75);
-}
-.header-main .row{
-    margin-bottom: 0;
-    height: 110px;
-}
-.header-main .info-conta{
-    padding: 0px 15px;
-}
-.info-conta .info-conta__nome{
-    margin-bottom: 5px;
-    color: #303F9F;
-    font-weight: bold;
-}
-.info-conta .info-conta__numero{
-    margin-bottom: 0px;
-    color: #303F9F;
-}
-.line-bar{
-    font-size: 0;
-    line-height: 80px;
-    width: 1px;
-    background-color: #303F9F;
-}
 
+/* Main */
 .main{
     height: 100%;
     margin-left: 240px;
@@ -53,24 +30,7 @@
     margin-left: 0;
     width: calc(100% - 0px)
 }
-.form-control-feedback p {
-    font-size: 14px;
-    color: red;
-    margin-top: 5px;
-}
 
-@media(max-width: 992px){
-    .main{
-        height: 100%;
-        margin-left: 0px;
-        width: calc(100% - 0px);
-        transition: .3s
-    }
-    .main.full{
-        margin-left: 0px;
-        width: calc(100% - 00px)
-    }
-}
 .content-main{
     min-height: calc(100% - 110px);
     background: #f0f0f0;
@@ -79,34 +39,77 @@
     height: 100%;
 }
 
-/* Cards */
-.card{
-    background: #303F9F;
-    text-align: center;
-    color: #fff;
-    height: 180px
+.cardrow{
+    padding-top: 10%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.card-receipt{
-    width: 370px;
+/* Callbacks */
+
+.form-control-feedback p {
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
 }
 
-.card-receipt-text{
-    width: 80%;
-    margin-left: 10px;
-    margin-right: 10px;
+/* Toast */
+.toast-error{
+	will-change: transform;
+	font-family: "Montserrat", "Arial", sans-serif;
+	padding: 15px;
+	box-sizing: border-box;
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	transform: translateY(100%);
+	background: #ef5350;
+	color: rgba(0,0,0,.6);
+	font-weight: bold;
+	background: #454545;
+	color: white;
+	font-weight: normal;
+	animation: toast 5s ease forwards;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+	text-align: center;
 }
 
-.card-receipt-title{
-    width: 80%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
+.toast-errorfirst-letter {
+	text-transform: uppercase;
 }
 
-.card.texto p {
-    margin-bottom: 0;
+@keyframes toast {
+	0%, 100% {
+		opacity: 0;
+		transform: translateY(100%)
+	}
+	10%, 90% {
+		opacity: 1;
+		transform: translateY(0%)
+	}
 }
+
+@media (min-width: 679px){
+	.toast-error{
+		top: 15%;
+		width: auto;
+		text-align: left;
+		transform: translateX(100vw);
+	}
+
+	@keyframes toast {
+		0%, 100% {
+			opacity: 0;
+			transform: translateX(100vw)
+		}
+		10%, 90% {
+			opacity: 1;
+			transform: translateX(calc(calc(-100% + 100vw) - 5vw))
+		}
+	}
+}
+
 /* Icons */
 .icon{
     display: block;
@@ -154,8 +157,23 @@
 }
 
 
-@media(min-width: 768px) {
-.content-main {
-    padding: 0 35px;
+/* Media Queries */
+
+@media(max-width: 992px){
+    .main{
+        height: 100%;
+        margin-left: 0px;
+        width: calc(100% - 0px);
+        transition: .3s
+    }
+    .main.full{
+        margin-left: 0px;
+        width: calc(100% - 00px)
+    }
 }
+
+@media(min-width: 768px) {
+    .content-main {
+        padding: 0 35px;
+    }
 }

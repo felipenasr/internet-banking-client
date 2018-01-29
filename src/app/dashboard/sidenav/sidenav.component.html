@@ -1,0 +1,22 @@
+<section class="sidebar-menu" [ngClass]="{'full' : isFull}">
+    <header class="header-navigation">
+        <a [routerLink]="['/dashboard']"><h1 class="logo">Bank</h1></a>
+    </header>
+    <nav class="nav-navigation">
+        <ul>
+            <!-- <li routerLinkActive="active"><a routerLink="/dashboard"><i class="icon-dash"></i>Dashboard</a></li> -->
+            <li (click)="toggleMenu()" routerLinkActive="active"><a routerLink="/dashboard/transfer"><i class="icon-transfer"></i>Transferências</a></li>
+            <li (click)="toggleMenu()" routerLinkActive="active"><a routerLink="/dashboard/extract"><i class="icon-extract"></i>Extratos</a></li>
+            <li (click)="logout()"><a href=""><i class="icon-exit"></i>Sair</a></li>
+        </ul>
+    </nav>
+    <div id="toggle-nav" class="hamburguer mt-5" (click)="toggleMenu()">
+        <span [style.background-color]="getStyle()"></span>
+        <span [style.background-color]="getStyle()"></span>
+        <span [style.background-color]="getStyle()"></span>
+    </div>
+</section>
+<div class="overlay" [ngClass]="{'full' : isFull}"></div>
+
+<!-- mal funcionamento na class hamburguer ao navegar entre pags -->
+<!-- ideia : inserir logo em header qndo sidenav estiver fechado -->

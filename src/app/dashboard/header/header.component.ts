@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
-import { UserResponse } from "../models/UserResponse";
-
-import { ApiService } from "../services/api.service";
-import { JwtTokenService } from "../services/jwt.service";
-import { AuthService } from "../services/auth.service";
+import { UserResponse } from '../../shared/models/UserResponse'
+import { ApiService } from '../../shared/services/api.service'
+import { JwtTokenService } from '../../shared/services/jwt.service'
+import { AuthService } from '../../shared/services/auth.service'
 
 @Component({
   selector: 'app-header',
