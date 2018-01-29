@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../shared/services/api.service';
+import { JwtTokenService } from '../../shared/services/jwt.service';
+
 
 @Component({
   selector: 'app-extract',
@@ -7,16 +10,23 @@ import { Component, OnInit } from '@angular/core'
 })
 export class ExtractComponent implements OnInit {
 
-  listaTransfers = [
-    {dia: 12, mes: 'Jan', origem: 'MercadoCar Faria Lima', tipo: 'Cartão de Crédito', valor: 185},
-    {dia: 13, mes: 'Jan', origem: 'Pedro Carlos', tipo: 'Transferência: TEF', valor: 250},
-    {dia: 14, mes: 'Jan', origem: 'José Fernando', tipo: 'Transferência: DOC', valor: 750},
-    {dia: 14, mes: 'Jan', origem: 'BK Shopping Eldorado', tipo: 'Cartão de Crédito', valor: 75} 
-  ]
 
-  constructor() { }
+  private route = 'extract';
+
+  constructor(
+    private http: ApiService,
+    private jwt: JwtTokenService
+  ) { }
 
   ngOnInit() {
+    this.getList()
+  }
+
+  getList(){
+    this.http.post(this.route, {token: this.jwt.getToken()})
+             .subscribe(res =>{
+               console.log(res);
+             }, err => err);
   }
 
 }
