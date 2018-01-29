@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
       user: this.cpf.value,
       pass: this.senha.value
     };
-    
+
     // this.router.navigate(['/dashboard']);   
     
     this.http.post(this.api_url, user)

@@ -10,7 +10,7 @@
 .card-body{
     background: #303F9F;
     color: #fff;
-    font-weight: bold;
+    font-weight: 500;
     transition: .3s ease-in-out;
     text-align: center;
     min-height: 180px;

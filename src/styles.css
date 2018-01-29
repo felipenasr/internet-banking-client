@@ -1,1 +1,200 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
+
+.card:hover .card-body,
+.card:focus .card-body{
+    background: #3F51B5;
+    box-shadow: 0px 0px 20px #666;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+.card-body{
+    background: #303F9F;
+    color: #fff;
+    font-weight: 500;
+    transition: .3s ease-in-out;
+    text-align: center;
+    min-height: 180px;
+}
+
+/* 
+
+-- Main
+-- Callbacks
+-- Icons
+-- Media Queries
+-- Toast
+
+*/
+
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fullscreen{
+    height: 100vh;
+    width: 100%;
+}
+
+/* Main */
+.main{
+    height: 100%;
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    transition: .3s
+}
+.main.full{
+    margin-left: 0;
+    width: calc(100% - 0px)
+}
+
+.content-main{
+    min-height: calc(100% - 110px);
+    background: #f0f0f0;
+}
+.content-main .row{
+    height: 100%;
+}
+
+.cardrow{
+    padding-top: 14%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Callbacks */
+
+.form-control-feedback p {
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+}
+
+/* Toast */
+.toast-error{
+	will-change: transform;
+	font-family: "Montserrat", "Arial", sans-serif;
+	padding: 15px;
+	box-sizing: border-box;
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	transform: translateY(100%);
+	background: #ef5350;
+	color: rgba(0,0,0,.6);
+	font-weight: bold;
+	background: #454545;
+	color: white;
+	font-weight: normal;
+	animation: toast 5s ease forwards;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+	text-align: center;
+}
+
+.toast-errorfirst-letter {
+	text-transform: uppercase;
+}
+
+@keyframes toast {
+	0%, 100% {
+		opacity: 0;
+		transform: translateY(100%)
+	}
+	10%, 90% {
+		opacity: 1;
+		transform: translateY(0%)
+	}
+}
+
+@media (min-width: 679px){
+	.toast-error{
+		top: 15%;
+		width: auto;
+		text-align: left;
+		transform: translateX(100vw);
+	}
+
+	@keyframes toast {
+		0%, 100% {
+			opacity: 0;
+			transform: translateX(100vw)
+		}
+		10%, 90% {
+			opacity: 1;
+			transform: translateX(calc(calc(-100% + 100vw) - 5vw))
+		}
+	}
+}
+
+/* Media Queries */
+
+@media(max-width: 992px){
+    .main{
+        height: 100%;
+        margin-left: 0px;
+        width: calc(100% - 0px);
+        transition: .3s
+    }
+    .main.full{
+        margin-left: 0px;
+        width: calc(100% - 00px)
+    }
+}
+
+@media(min-width: 768px) {
+    .content-main {
+        padding: 0 35px;
+    }
+}
+
+
+.icon{
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 20px auto 15px;
+}
+.icon.transferencia{
+    background: url(assets/img/icons/transferencias-64x64.png) center no-repeat;
+}
+.icon.extrato{
+    background: url(assets/img/icons/extratos-64x64.png) center no-repeat;
+}
+.icon-extract{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    background: url(assets/img/icons/extratos-24x24.png);
+}
+.icon-transfer{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 15px;
+    display: inline-block;
+    background: url(assets/img/icons/transferencias-24x24.png);
+}
+.icon-dash{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    background: url(assets/img/icons/dashboard-24x24.png);
+}
+.icon-exit{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    background: url(assets/img/icons/exit-24x24.png);
+}

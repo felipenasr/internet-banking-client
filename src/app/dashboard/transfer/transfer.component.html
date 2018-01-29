@@ -1,13 +1,9 @@
   <section class="content-main">
     <div class="row justify-content-center align-items-center">
       <form #formTranfer="ngForm" action="" id="formTransfer" class="col-md-12">
-        <div class=" justify-content-center align-items-center">
-          <div class="row col-lg-12">
-            <div class="col-sm-6 col-xs-12 p-3">
-              <label for="numContaOrigem">Número da conta de origem: </label>
-              <input type="text" id="numContaOrigem" name="numContaOrigem" class="col-sm form-control" placeholder="Conta Origem" required>
-            </div>
-            <hr>
+        <div class="justify-content-center align-items-center">
+          <div class="row  justify-content-md-center  col-lg-12">
+            
             <div class="col-sm-6 col-xs-12 p-3">
               <label for="numContaDestino">Número da conta de destino: </label>
               <input [(ngModel)]="transfer.account_number_dest"
@@ -18,14 +14,9 @@
                      placeholder="Conta Destino"
                      required>
             </div>
-            <hr>
             </div>
-            <div class="row col-lg-12">
-            <div class="col-sm-6 col-xs-12 p-3">
-              <label for="dataTransfer">Data da Transferencia</label>
-              <input type="text" id="dataTransfer" name="dataTransfer" class="col-sm form-control" placeholder="DD/MM/AAAA" pattern="\d{1,2}/\d{1,2}/\d{4}">
-            </div>
-            <hr>
+            <div class="row justify-content-md-center  col-lg-12">
+            
             <div class="col-sm-6 col-xs-12 p-3">
               <label for="valorTransfer">Valor da Transferência</label>
               <input
@@ -35,12 +26,25 @@
                     name="valorTransfer"
                     class="col-sm form-control"
                     placeholder="Valor em R$">
-              <button (click)="newTransfer()" class="btn btn-primary btn-submit float-right mb-4">Avançar</button>
-
             </div>
+            </div>
+
+            <div class="row justify-content-md-center col-lg-12">
+            
+              <div class="col-sm-6 col-xs-12 p-3">
+                <label for="valorTransfer">Digite sua senha</label>
+              <input
+                    [(ngModel)]= "transfer.senha"
+                    type="password"
+                    id="senhaTransfer"
+                    name="senhaTransfer"
+                    class="col-sm form-control"
+                    placeholder="Senha">
+              <button (click)="newTransfer()" class="btn btn-primary btn-submit float-right mb-4">Avançar</button>
+              </div>
+              </div>
           </div>
-        </div>
-        
+
       </form>
     </div>
   </section>
