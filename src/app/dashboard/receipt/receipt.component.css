@@ -8,6 +8,9 @@
 
 .card-receipt{
     width: 370px;
+    background: white;
+    box-shadow: 0 2px 10px #666;
+    margin-top: 8%;
 }
 
 .card-receipt-text{
@@ -18,11 +21,28 @@
 
 .card-receipt-title{
     width: 80%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
+    margin: 10px;
+    color: #303f9f;
+    font-weight: 500;
 }
 
 .card.texto p {
     margin-bottom: 0;
+}
+
+.card-header {
+    background: #303f9f;
+    color: #fff;
+}
+
+.card-receipt .btn {
+        border-radius: 0;
+        background: #303F9F;
+        border-color: #303F9F;
+        margin: 15px 0;
+        float: right;
+}
+
+.card-block {
+    padding: 15px;
 }
