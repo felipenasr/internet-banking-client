@@ -20,11 +20,13 @@
             <div class="col-sm-6 col-xs-12 p-3">
               <label for="valorTransfer">Valor da Transferência</label>
               <input
+                    currencyMask 
                     [(ngModel)]= "transfer.value"
+                    [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
                     type="text"
                     id="valorTransfer"
                     name="valorTransfer"
-                    class="col-sm form-control"
+                    class="col-sm form-control text-left"
                     placeholder="Valor em R$">
             </div>
             </div>
