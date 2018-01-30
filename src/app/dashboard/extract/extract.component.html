@@ -33,9 +33,9 @@
                             </thead>
                             <tbody>
                                 <tr *ngFor="let transfer of listaTransfers">
-                                    <td>{{transfer.dia}}/{{transfer.mes}}</td>
+                                    <td>{{transfer.date.substring(8,10)}}/{{transfer.date.substring(4,7)}}</td>
                                     <td>{{transfer.tipo}}</td>
-                                    <td>R${{transfer.valor}},00</td>
+                                    <td>R${{transfer.value}},00</td>
                                 </tr>
                             </tbody>
                         </table>
