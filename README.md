@@ -34,6 +34,7 @@ Agora com as dependências instaladas, você vai encontrar alguns arquivos já c
 
 *Projeto Angular*
 
+<<<<<<< HEAD
 ```
 npm start
 ```
@@ -47,3 +48,6 @@ A Aplicação possui as funcionalidades:
 - Extratos
 
 ![exemplo-de-uso](http://backuplw2.tecnologia.ws/dashboard.png)
+=======
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+>>>>>>> d856c1a0c7dc2a93d34f282338d5b03f0560336c
