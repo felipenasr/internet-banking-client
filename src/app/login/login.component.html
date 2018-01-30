@@ -1,55 +1,53 @@
 <div class="fullscreen login">
   <div class="color">
-  <main class="login-center">
-          <section class="box-login">
-              <header class="login-header">
-                  <h1 class="logo">GamaBank</h1>
-                  <h4 class="title-login text-center">Entrar</h4>
-              </header>
-              <form #formLogin="ngForm" class="login-form" id="formLogin" [formGroup]="myform" novalidate>
-                <div class="form-group" [ngClass]="{
+    <main class="login-center">
+      <section class="box-login">
+        <header class="login-header">
+          <h1 class="logo">GamaBank</h1>
+          <h4 class="title-login text-center">Entrar</h4>
+        </header>
+        <form #formLogin="ngForm" class="login-form" id="formLogin" [formGroup]="myform" novalidate>
+          <div class="form-group" [ngClass]="{
                   'has-danger': cpf.invalid && (cpf.dirty || cpf.touched),
                   'has-success': cpf.valid && (cpf.dirty || cpf.touched)
                  }">
-                  <input type="text" placeholder="CPF" id="cpf" class="form-control" formControlName="cpf" maxlength="14" [(ngModel)]="appCpfMask" appCpfMask="999.999.999-99">
-                  <div class="form-control-feedback"
-                    *ngIf="cpf.errors && (cpf.dirty || cpf.touched)">
-                    <p *ngIf="cpf.errors.required">Digite o CPF</p>
-                  </div>
-                </div>
-                
-                <!--
+            <input type="text" placeholder="CPF" id="cpf" class="form-control" formControlName="cpf" maxlength="14" [(ngModel)]="appCpfMask"
+              appCpfMask="999.999.999-99">
+            <div class="form-control-feedback" *ngIf="cpf.errors && (cpf.dirty || cpf.touched)">
+              <p *ngIf="cpf.errors.required">Digite o CPF</p>
+            </div>
+          </div>
+
+          <!--
                   <pre>Valid? {{ myform.controls.cpf.valid }}</pre>
                   <pre>Dirty? {{ myform.controls.cpf.dirty }}</pre>
                 -->
 
-                <div class="form-group" [ngClass]="{
+          <div class="form-group" [ngClass]="{
                   'has-danger': senha.invalid && (senha.dirty || senha.touched),
                   'has-success': senha.valid && (senha.dirty || senha.touched)
                 }">
-                  <input type="password" placeholder="Senha" id="password" class="form-control" formControlName="senha">
-                  <div class="form-control-feedback"
-                    *ngIf="senha.errors && (senha.dirty || senha.touched)">
-                    <p *ngIf="senha.errors.required">Digite a senha</p>
-                  </div>
-                </div>
+            <input type="password" placeholder="Senha" id="password" class="form-control" formControlName="senha">
+            <div class="form-control-feedback" *ngIf="senha.errors && (senha.dirty || senha.touched)">
+              <p *ngIf="senha.errors.required">Digite a senha</p>
+            </div>
+          </div>
 
-                <!--
+          <!--
                   <pre>Valid? {{ myform.controls.senha.valid }}</pre>
                   <pre>Dirty? {{ myform.controls.senha.dirty }}</pre>
                 -->
 
-                <div class="form-check text-center mb-2">
-                  <input type="checkbox" id="remember" class="form-check-input">
-                  <label class="form-check-label" for="remember">Lembrar meu CPF</label>
-                </div>
-                <button class="btn btn-primary pull-right col-sm-12"
-                  (click)="login()" [disabled]="!myform.valid">Login</button>
-              </form>
-              <!-- <footer class="login-footer">
+          <div class="form-check text-center mb-2">
+            <input type="checkbox" id="remember" class="form-check-input">
+            <label class="form-check-label" for="remember">Lembrar meu CPF</label>
+          </div>
+          <button class="btn btn-primary pull-right col-sm-12" (click)="login()" [disabled]="!myform.valid">Login</button>
+        </form>
+        <!-- <footer class="login-footer">
                   <p class="text-center">Esqueceu sua senha? <a routerLink="/dashboard">Clique aqui</a></p>
               </footer> -->
-          </section>
-  </main>
-</div>
+      </section>
+    </main>
+  </div>
 </div>
