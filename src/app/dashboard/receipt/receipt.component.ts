@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import * as Pubsub from 'pubsub-js'
+
+import { LocalStorageService } from '../../shared/services/local-storage.service'
 
 @Component({
   selector: 'app-receipt',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReceiptComponent implements OnInit {
 
-  constructor() { }
+  nomeDestinatario = ''
+
+  constructor(private local: LocalStorageService) { }
 
   ngOnInit() {
+    // Pubsub.subscribe('DESTINATARIO',(res) => {
+    //   this.nomeDestinatario = res.name
+    // })
+    this.nomeDestinatario = localStorage.getItem("destinatario")
   }
 
 }
