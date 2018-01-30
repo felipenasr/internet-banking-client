@@ -1,27 +1,49 @@
-# ClientSide
+# Projeto Gama Bank
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+----
 
-## Development server
+## Descrição 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+O projeto consiste em um sistema de Internet Banking que consome uma API interna que possiu os dados bancários dos clientes.
 
-## Code scaffolding
+## Requisitos
+- Bootstrap 4
+- Angular 5
+- NodeJs 6+
+- MongoDb 3+
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Começando!
 
-## Build
+### Instalação e Configuração no ambiente Mac, Windows e Linux
+- Instale o Node.js versão 8 que pode ser baixado [neste link](https://nodejs.org/en/download/).
+- Instale o MongoDb na versão 3.6 que pode ser baixado no link [neste link](https://www.mongodb.com/download-center?jmp=nav#atlas)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Através do prompt de comando (cmd) execute o clone do projeto no GitHub
 
-## Running unit tests
+```
+git clone https://github.com/felipenasr/internet-banking-client.git
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Com o projeto clonado e o Node.js instalado, execute o comando abaixo para instalar as dependências do projeto.
 
-## Running end-to-end tests
+```
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Agora com as dependências instaladas, você vai encontrar alguns arquivos já criados. Para rodar um servidor local execute o seguinte comando:
 
-## Further help
+*Projeto Angular*
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+npm start
+```
+
+## Plataforma 
+
+A Aplicação possui as funcionalidades:
+- Login
+- Dashboard
+- Transferência
+- Extratos
+
+![exemplo-de-uso](http://backuplw2.tecnologia.ws/dashboard.png)
