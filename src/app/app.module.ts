@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module'
 import { DashboardModule } from './dashboard/dashboard.module'
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 import { AppComponent } from './app.component'
 import { LoginComponent } from './login/login.component'
@@ -25,7 +26,8 @@ import { LocalStorageService } from './shared/services/local-storage.service'
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CurrencyMaskModule
   ],
   providers: [
     ApiService,

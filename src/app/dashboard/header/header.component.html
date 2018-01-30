@@ -2,7 +2,7 @@
   <div class="row justify-content-end align-items-center">
     <div class="info-conta">
       <p class="info-conta__nome">Saldo</p>
-      <p class="info-conta__numero">R$ {{user_info.balance}}</p>
+      <p class="info-conta__numero">{{user_info.balance | currency: 'R$ '}}</p>
     </div>
     <div class="info-conta mr-4">
       <p class="info-conta__nome">{{user_info.alias}}</p>
