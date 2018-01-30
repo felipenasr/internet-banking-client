@@ -26,7 +26,7 @@ export class ExtractComponent implements OnInit {
     this.http.post(this.route, {token: this.jwt.getToken()})
              .subscribe(res =>{
               //  console.log(res.origin);
-               this.listaTransfers = res.origin;
+              //  this.listaTransfers = res.origin;
              }, err => err);
   }
 
