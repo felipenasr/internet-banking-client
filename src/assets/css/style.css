@@ -67,7 +67,7 @@
 	background: #ef5350;
 	color: rgba(0,0,0,.6);
 	font-weight: bold;
-	background: #454545;
+	/* background: #454545; */
 	color: white;
 	font-weight: normal;
 	animation: toast 5s ease forwards;

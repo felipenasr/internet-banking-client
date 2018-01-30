@@ -6,3 +6,11 @@ export class Transfers {
         public token: String
     ) {}
 }
+
+export class TransferRes {
+
+    constructor(
+        public error: String,
+        public success: boolean
+    ) {}
+}

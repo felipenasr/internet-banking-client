@@ -2,6 +2,9 @@
     <div class="row justify-content-center align-items-center">
       <form #formTranfer="ngForm" action="" id="formTransfer" class="col-md-12">
         <div class="justify-content-center align-items-center">
+          <div *ngIf="transfer_info.error" ngClass="transfer_info.error ? toast-error : ''">
+            {{transfer_info.error}}
+          </div>
           <div class="row  justify-content-md-center  col-lg-12">
             
             <div class="col-sm-6 col-xs-12 p-3">
