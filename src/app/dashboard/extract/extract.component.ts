@@ -10,7 +10,7 @@ import { JwtTokenService } from '../../shared/services/jwt.service';
 })
 export class ExtractComponent implements OnInit {
 
-
+  listaTransfers = [];
   private route = 'extract';
 
   constructor(
@@ -25,7 +25,8 @@ export class ExtractComponent implements OnInit {
   getList(){
     this.http.post(this.route, {token: this.jwt.getToken()})
              .subscribe(res =>{
-               console.log(res);
+              //  console.log(res.origin);
+               this.listaTransfers = res.origin;
              }, err => err);
   }
 
