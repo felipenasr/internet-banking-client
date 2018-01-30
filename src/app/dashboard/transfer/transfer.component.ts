@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Transfers } from '../../shared/models/Transfers'
+import { Transfers, TransferRes } from '../../shared/models/Transfers'
 
 import { ApiService } from '../../shared/services/api.service'
 import { JwtTokenService } from '../../shared/services/jwt.service'
@@ -10,6 +10,7 @@ import { JwtTokenService } from '../../shared/services/jwt.service'
   styleUrls: ['./transfer.component.css']
 })
 export class TransferComponent implements OnInit {
+  router: any;
 
 
   constructor(
@@ -20,7 +21,7 @@ export class TransferComponent implements OnInit {
   private _url = "transfers";
   transfer= new Transfers('',0,'');
   
-
+  transfer_info = new TransferRes('',false);
 
   ngOnInit() {
   }
@@ -28,8 +29,16 @@ export class TransferComponent implements OnInit {
   newTransfer(){
     this.transfer.token = this.jwt.getToken();
     this.http.post(this._url, this.transfer)
-        .subscribe((res)=>{
-          console.log(res)
+        .subscribe((res:TransferRes)=>{
+          this.transfer_info = res;
+          console.log(this.transfer_info.error)
+          if(this.transfer_info.success === true) {
+            //redirecionar pra componente de comprovante
+          }
+          setTimeout(
+            () => this.transfer_info = new TransferRes('',false)
+            , 8000
+        )
         },error => {
           console.log(error);
         })
@@ -37,3 +46,5 @@ export class TransferComponent implements OnInit {
 
 
 }
+
+
