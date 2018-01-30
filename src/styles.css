@@ -59,6 +59,7 @@
 }
 .content-main .row{
     height: 100%;
+    max-width: 100%;
 }
 
 .cardrow{
@@ -89,12 +90,13 @@
 	background: #ef5350;
 	color: rgba(0,0,0,.6);
 	font-weight: bold;
-	background: #454545;
+	/* background: #454545; */
 	color: white;
 	font-weight: normal;
-	animation: toast 5s ease forwards;
+	animation: toast 7s ease forwards;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
-	text-align: center;
+    text-align: center;
+    z-index: 1;
 }
 
 .toast-errorfirst-letter {

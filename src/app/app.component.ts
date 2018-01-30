@@ -8,3 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 }
+
+class Mensagens {
+
+  constructor(private msg: string){}
+
+  get texto(){
+      return this.msg
+  }
+
+}

@@ -2,11 +2,14 @@
     padding: 25px 0;
 }
 
-#extractTable .nav-link.active {
+#extractTable .nav-link.active ,
+#extractTable .nav-link:hover, 
+#extractTable .nav-link:focus {
     border-radius: 0;
     background: #303f9f;
     margin: 10px 0;
     color: #fff;
+    transition: .2s ease
 }
 
 #extractTable .nav-link{
@@ -30,4 +33,21 @@
     margin: 20px;
     padding:10px;
     border-radius: 0;
+}
+
+.extract thead {
+    border-radius: 0;
+    background: #303f9f;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.extract tr:hover, 
+.extract tr:focus{
+    cursor: pointer;
+    transition: .2s ease;
+    border-radius: 0;
+    background-color: #303f9f;
+    color: #ffffff;
+    margin: 10px 0;
 }
