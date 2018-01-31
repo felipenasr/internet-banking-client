@@ -45,7 +45,7 @@ describe('Testando Flow', function () {
         cy.wait(500);
         //click confirma transaçao
         cy.get('.btn')
-            .contains('Avançar')
+            .contains('Confirmar')
             .wait(500)
             .click();
         cy.url().should('include', '/dashboard/receipt')
