@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../shared/services/api.service';
 import { JwtTokenService } from '../../shared/services/jwt.service';
+import { HeaderComponent } from '../header/header.component';
 
 
 @Component({
@@ -10,7 +11,9 @@ import { JwtTokenService } from '../../shared/services/jwt.service';
 })
 export class ExtractComponent implements OnInit {
 
-  listaTransfers = [];
+  // numContaOrigem = HeaderComponent.
+  listaTransfCred = [];
+  listaTransfDeb = [];
   private route = 'extract';
 
   constructor(
@@ -22,12 +25,17 @@ export class ExtractComponent implements OnInit {
     this.getList()
   }
 
-  getList(){
-    this.http.post(this.route, {token: this.jwt.getToken()})
-             .subscribe(res =>{
-              //  console.log(res.origin);
-              //  this.listaTransfers = res.origin;
-             }, err => err);
+
+  getList() {
+    this.http.post(this.route, { token: this.jwt.getToken() })
+      .subscribe(res => {
+        //res = {origin: [], dest: []}
+        console.log(res);
+        //transações de débito (origin)
+        this.listaTransfCred = res.origin;
+        //transaçoes de crédito (dest)
+        this.listaTransfDeb = res.dest;
+      }, err => err);
   }
 
 }

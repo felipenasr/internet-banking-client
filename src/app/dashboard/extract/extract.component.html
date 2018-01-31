@@ -1,47 +1,67 @@
-
-    <section id="extractTable" class="container-fluid content-main">
-        <div class="col-12">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-sm-10">
-                    <div class="row justify-content-center">
-                        <ul class="nav nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">2 dias</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">5 dias</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">30 dias</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">60 dias</a>
-                            </li>
-                        </ul>
-                    </div>     
+<section id="extractTable" class="container-fluid content-main">
+    <div class="col-12">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-10">
+                <div class="row justify-content-center">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">2 dias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">5 dias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">30 dias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">60 dias</a>
+                        </li>
+                    </ul>
                 </div>
-    
-                <div class="col-sm-10 ">
-                    <div class="table-responsive">
-                        <table class="table table-hover extract">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#Data</th>
-                                    <th scope="col">#Transação</th>
-                                    <th scope="col">#Valor</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor="let transfer of listaTransfers">
-                                    <td>{{transfer.date.substring(8,10)}}/{{transfer.date.substring(4,7)}}</td>
-                                    <td>{{transfer.tipo}}</td>
-                                    <td>R${{transfer.value}},00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <a [routerLink]="['/dashboard']" class="btn btn-secondary col-sm-3 btnVoltar">Voltar</a> 
             </div>
+
+            <div class="col-sm-10 ">
+                <div class="table-responsive">
+                    <table class="table table-hover extract">
+                        <thead>
+                            <tr>
+                                <th scope="col">#Data</th>
+                                <th scope="col">#Transação</th>
+                                <th scope="col">#Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let transfer of listaTransfDeb">
+                                <td>{{transfer.date.substring(8,10)}}/{{transfer.date.substring(4,7)}}</td>
+                                <td>Crédito</td>
+                                <td>R${{transfer.value}},00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="col-sm-10 ">
+                <div class="table-responsive">
+                    <table class="table table-hover extract">
+                        <thead>
+                            <tr>
+                                <th scope="col">#Data</th>
+                                <th scope="col">#Transação</th>
+                                <th scope="col">#Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let transfer of listaTransfCred">
+                                <td>{{transfer.date.substring(8,10)}}/{{transfer.date.substring(4,7)}}</td>
+                                <td>Débito</td>
+                                <td>R${{transfer.value}},00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <a [routerLink]="['/dashboard']" class="btn btn-secondary col-sm-3 btnVoltar">Voltar</a>
         </div>
-    </section>
+    </div>
+</section>
