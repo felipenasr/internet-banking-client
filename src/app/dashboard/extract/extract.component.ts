@@ -32,9 +32,9 @@ export class ExtractComponent implements OnInit {
         //res = {origin: [], dest: []}
         console.log(res);
         //transações de débito (origin)
-        this.listaTransfCred = res.origin;
+        this.listaTransfDeb = res.origin;
         //transaçoes de crédito (dest)
-        this.listaTransfDeb = res.dest;
+        this.listaTransfCred = res.dest;
       }, err => err);
   }
 
