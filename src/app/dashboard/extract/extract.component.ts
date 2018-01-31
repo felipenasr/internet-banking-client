@@ -28,7 +28,7 @@ export class ExtractComponent implements OnInit {
 
   getList() {
     this.http.post(this.route, { token: this.jwt.getToken() })
-      .subscribe((res:any) => {
+      .subscribe((res: any) => {
         //res = {origin: [], dest: []}
         console.log(res);
         //transações de débito (origin)
@@ -36,6 +36,54 @@ export class ExtractComponent implements OnInit {
         //transaçoes de crédito (dest)
         this.listaTransfCred = res.dest;
       }, err => err);
+  }
+  isActive = false  
+  lastTwo(){
+    //no click do botao de x dias
+    let dias = 2;
+    // pegar esses x dias
+    // pegar data atual - x dias
+    let tempo = new Date().getDate()-dias
+    //filtrar array
+    this.listaTransfCred = this.listaTransfCred.filter((trans) => {
+      let diaAtual = new Date(trans.date).getDate()
+      if (diaAtual >= tempo) {
+        // console.log(trans);
+        return trans
+      }
+    })
+    this.listaTransfDeb = this.listaTransfDeb.filter((trans) => {
+      let diaAtual = new Date(trans.date).getDate()
+      if (diaAtual >= tempo) {
+        // console.log(trans);
+        return trans
+      }
+    });
+  }
+  lastFive() {
+ 
+    //no click do botao de x dias
+    let dias = 5;
+    // pegar esses x dias
+    // pegar data atual - x dias
+    let tempo = new Date().getDate() - dias
+    //filtrar array
+    this.listaTransfCred = this.listaTransfCred.filter((trans) => {
+      let diaAtual = new Date(trans.date).getDate()
+      if (diaAtual >= tempo) {
+        // console.log(trans);
+        return trans
+      }
+    })
+    this.listaTransfDeb = this.listaTransfDeb.filter((trans) => {
+      let diaAtual = new Date(trans.date).getDate()
+      if (diaAtual >= tempo) {
+        // console.log(trans);
+        return trans
+      }
+    });
+    //exibir transaçoes nos ultimos x dias
+
   }
 
 }

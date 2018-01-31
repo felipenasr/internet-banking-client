@@ -37,9 +37,16 @@
 
 .extract thead {
     border-radius: 0;
-    background: #303f9f;
     margin: 10px 0;
     color: #fff;
+}
+
+.extract .credit,.extract thead.credit th {
+    background: #28a745
+}
+
+.extract .debit, .extract thead.debit th  {
+    background: #b53030
 }
 
 .extract tr:hover, 
