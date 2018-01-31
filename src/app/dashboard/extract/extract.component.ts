@@ -28,7 +28,7 @@ export class ExtractComponent implements OnInit {
 
   getList() {
     this.http.post(this.route, { token: this.jwt.getToken() })
-      .subscribe(res => {
+      .subscribe((res:any) => {
         //res = {origin: [], dest: []}
         console.log(res);
         //transações de débito (origin)

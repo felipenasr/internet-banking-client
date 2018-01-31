@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Transfers, TransferRes } from '../../shared/models/Transfers'
-import * as Pubsub from 'pubsub-js'
 
 import { ApiService } from '../../shared/services/api.service'
 import { JwtTokenService } from '../../shared/services/jwt.service'
 import { LocalStorageService } from '../../shared/services/local-storage.service'
+import { PubSubService } from 'angular2-pubsub'
 
 import { Router } from '@angular/router';
 import { UserResponse } from '../../shared/models/UserResponse'
@@ -23,7 +23,8 @@ export class TransferComponent implements OnInit {
     private http: ApiService,
     private jwt: JwtTokenService,
     private routerLink: Router,
-    private local: LocalStorageService
+    private local: LocalStorageService,
+    private pubsub: PubSubService
   ) { }
 
   private _url = "transfers";
@@ -44,9 +45,11 @@ export class TransferComponent implements OnInit {
           this.transfer_info = res;
           console.log(this.transfer_info.error)
           if(this.transfer_info.success === true) {
+              // this.http.saldo = Number(this.http.saldo) - Number(this.transfer.value)
+              this.pubsub.$pub('saldoUpdate', this.transfer.value)
               this.routerLink.navigate(['/dashboard/receipt/'])
               // Pubsub.publish('SALDO_ATUAL', this.transfer.value)
-              this.local.set('saldo', this.transfer.value)
+              // this.local.set('saldo', this.transfer.value)
               this.jwt.setToken(res.token);
               this.transfer_info.hash = res.hash;
               this.http.post(this._urlDestino,{token: res.token, account: this.transfer.account_number_dest})
