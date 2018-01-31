@@ -11,6 +11,8 @@ export class TransferRes {
 
     constructor(
         public error: String,
-        public success: boolean
+        public success: boolean,
+        public token: String,
+        public hash: String
     ) {}
 }

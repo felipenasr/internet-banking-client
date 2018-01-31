@@ -21,12 +21,17 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@types/pubsub-js": "^1.5.18",
     "bootstrap": "^4.0.0",
     "core-js": "^2.4.1",
     "ng2-currency-mask": "^4.4.1",
     "ng2-money-mask": "^1.0.0",
     "ngx-bootstrap": "^2.0.2",
+<<<<<<< HEAD
     "ngx-mask": "^2.2.2",
+=======
+    "pubsub-js": "^1.6.0",
+>>>>>>> 9dbaefdc4d83b925416f9056356affda701a09ec
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },

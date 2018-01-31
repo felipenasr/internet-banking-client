@@ -1,11 +1,12 @@
-describe('Testando Pagina de Login', function () {
+describe('Testando Flow', function () {
 
     it('Visita o Gama Banking', () => {
         cy.visit('localhost:4200');
+        cy.wait(600);
     })
 
-    context('Login/Logout', () => {
-        it('Faz login e logout', () => {
+    context('Usabilidade', () => {
+        it('login, transacao, extrato, logout', () => {
             //insere no CPF
             cy.get('#cpf')
                 .type('42145154809')
@@ -20,33 +21,7 @@ describe('Testando Pagina de Login', function () {
             //url /dashboard
             cy.url().should('include', '/dashboard');
 
-            //selecionado botao de sair e click
-            cy.get('.icon-exit')
-                .wait(600)
-                .click();
-            //confere url
-            cy.url().should('include', '/');
-        })
-    })
 
-    context('Dasboard', () => {
-        it('Navegação extrato', () => {
-            cy.visit('localhost:4200/dashboard');
-
-            //clica no btn de transferencia
-            cy.get('.extrato')
-                .click();
-            //confere url
-            cy.url().should('include', '/dashboard/extract')
-            //volta pra dashboard
-            cy.get('.btnVoltar').click()
-            cy.url().should('include', '/dashboard')
-        })
-
-        it('Navegação transferencias', () => {
-            cy.visit('localhost:4200/dashboard');
-
-            //clica no btn de transferencia
             cy.get('.transferencia')
                 .click();
             //confere url
@@ -69,24 +44,25 @@ describe('Testando Pagina de Login', function () {
             cy.get('.btn')
                 .contains('Avançar')
                 .click();
-        })
 
 
-        it('Navegaçao SideNav', () => {
-            cy.visit('localhost:4200/dashboard');
-            
-            //clica side-nav, clica Transferencias, verifica url
-            cy.get('#toggle-nav').click({force: true});
-            cy.get('.icon-transfer').click();
-            cy.url().should('include', '/dashboard/transfer')
-            //clica side-nav, clica dash
-            cy.get('#toggle-nav').click({force: true});
-            cy.get('.icon-extract').click();
+            cy.get('#toggle-nav').click({ force: true });
+            cy.get('.icon-extract')
+                .wait(600)
+                .click();
             cy.url().should('include', '/dashboard/extract')
-            //clica side-nav, clica dash
-            cy.get('#toggle-nav').click({force: true});
-            cy.get('.icon-dash').click();
+
+            //volta pra dashboard
+            cy.get('.btnVoltar').click()
             cy.url().should('include', '/dashboard')
+
+            //selecionado botao de sair e click
+            cy.get('#toggle-nav').click({ force: true });
+            cy.get('.icon-exit')
+                .wait(600)
+                .click();
+            //confere url
+            cy.url().should('include', '/');
         })
 
     })
