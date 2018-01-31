@@ -1,5 +1,6 @@
   <section class="content-main">
     <div class="col-md-12">
+      <h1 class="text-left title-transfer">Dados da transferência</h1>
       <div class="row justify-content-center align-items-center">
         <form #formTranfer="ngForm" action="" id="formTransfer" class="col-md-12">
           <div class="justify-content-center align-items-center">
@@ -22,7 +23,7 @@
               <div class="row justify-content-md-center  col-lg-12">
               
               <div class="col-sm-6 col-xs-12 p-3">
-                <label for="valorTransfer">Valor da Transferência</label>
+                <label for="valorTransfer">Valor da Transferência:</label>
                 <input
                       currencyMask 
                       [(ngModel)]= "transfer.value"
@@ -38,7 +39,7 @@
               <div class="row justify-content-md-center col-lg-12">
               
                 <div class="col-sm-6 col-xs-12 p-3">
-                  <label for="valorTransfer">Digite sua senha</label>
+                  <label for="valorTransfer">Digite sua senha:</label>
                 <input
                       [(ngModel)]= "transfer.senha"
                       type="password"
@@ -46,7 +47,7 @@
                       name="senhaTransfer"
                       class="col-sm form-control"
                       placeholder="Senha">
-                <button (click)="newTransfer()" class="btn btn-primary btn-submit float-right mb-4">Avançar</button>
+                <button (click)="newTransfer()" class="btn btn-primary btn-submit float-right mb-4">Confirmar</button>
                 </div>
                 </div>
             </div>

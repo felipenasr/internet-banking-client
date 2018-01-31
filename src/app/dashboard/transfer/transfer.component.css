@@ -14,3 +14,18 @@
     border-color: #303F9F;
     margin: 15px 0;
 }
+
+.title-transfer {
+    font-size: 30px;
+    color: #303f9f;
+    padding: 10% 0 15px 0;
+    border-bottom: 1px solid #ddd;
+    margin: 30px 0 30px 0;
+    font-weight: 400;
+}
+
+@media(min-width: 992px) {
+    .title-transfer {
+        padding: 6% 0 15px 0;
+    }
+}
