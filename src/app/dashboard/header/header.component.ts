@@ -4,7 +4,7 @@ import { UserResponse } from '../../shared/models/UserResponse'
 import { ApiService } from '../../shared/services/api.service'
 import { JwtTokenService } from '../../shared/services/jwt.service'
 import { AuthService } from '../../shared/services/auth.service'
-import { PubSubService } from 'angular2-pubsub'
+// import { PubSubService } from 'angular2-pubsub'
 
 @Component({
   selector: 'app-header',
@@ -17,8 +17,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     public http: ApiService,
     private jwt: JwtTokenService,
-    private auth: AuthService,
-    private pubsub: PubSubService
+    private auth: AuthService
+    // private pubsub: PubSubService
   ) {
 
     // Pubsub.subscribe('SALDO_ATUAL', (res: number)=> {
@@ -33,9 +33,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.getUser()
-    this.pubsub.$sub('saldoUpdate').subscribe(
-      (res) => this.user_info.balance = Number(this.user_info.balance) - res
-    )
+    // this.pubsub.$sub('saldoUpdate').subscribe(
+    //   (res) => this.user_info.balance = Number(this.user_info.balance) - res
+    // )
     // Pubsub.subscribe('SALDO_ATUAL', (res: number)=> {
     //   this.user_info.balance = Number(this.user_info.balance) - res
     //   console.log('subscribe: ', this.user_info.balance)

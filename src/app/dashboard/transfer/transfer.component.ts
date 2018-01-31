@@ -4,7 +4,7 @@ import { Transfers, TransferRes } from '../../shared/models/Transfers'
 import { ApiService } from '../../shared/services/api.service'
 import { JwtTokenService } from '../../shared/services/jwt.service'
 import { LocalStorageService } from '../../shared/services/local-storage.service'
-import { PubSubService } from 'angular2-pubsub'
+// import { PubSubService } from 'angular2-pubsub'
 
 import { Router } from '@angular/router';
 import { UserResponse } from '../../shared/models/UserResponse'
@@ -23,8 +23,8 @@ export class TransferComponent implements OnInit {
     private http: ApiService,
     private jwt: JwtTokenService,
     private routerLink: Router,
-    private local: LocalStorageService,
-    private pubsub: PubSubService
+    private local: LocalStorageService
+    // private pubsub: PubSubService
   ) { }
 
   private _url = "transfers";
@@ -32,8 +32,6 @@ export class TransferComponent implements OnInit {
   transfer= new Transfers('',0,'');
   
   transfer_info = new TransferRes('',false,'','');
-
-  destino_info
 
   ngOnInit() {
   }
@@ -46,7 +44,7 @@ export class TransferComponent implements OnInit {
           console.log(this.transfer_info.error)
           if(this.transfer_info.success === true) {
               // this.http.saldo = Number(this.http.saldo) - Number(this.transfer.value)
-              this.pubsub.$pub('saldoUpdate', this.transfer.value)
+              // this.pubsub.$pub('saldoUpdate', this.transfer.value)
               this.routerLink.navigate(['/dashboard/receipt/'])
               // Pubsub.publish('SALDO_ATUAL', this.transfer.value)
               // this.local.set('saldo', this.transfer.value)
