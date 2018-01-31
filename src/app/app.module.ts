@@ -4,7 +4,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module'
 import { DashboardModule } from './dashboard/dashboard.module'
-import { CurrencyMaskModule } from "ng2-currency-mask";
+<<<<<<< HEAD
+import { CurrencyMaskModule } from 'ng2-currency-mask'
+import { PubSubModule } from 'angular2-pubsub'
+=======
+import { CurrencyMaskModule } from "ng2-currency-mask"
+import { NgxMaskModule } from "ngx-mask"
+>>>>>>> fb750a1437ec54300a5704050c9a50cf2d05bcea
 
 import { AppComponent } from './app.component'
 import { LoginComponent } from './login/login.component'
@@ -27,7 +33,8 @@ import { LocalStorageService } from './shared/services/local-storage.service'
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    PubSubModule.forRoot()
   ],
   providers: [
     ApiService,

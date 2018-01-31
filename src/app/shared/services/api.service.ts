@@ -5,6 +5,8 @@ import { environment } from "../../../environments/environment";
 
 @Injectable()
 export class ApiService {
+    saldo: Number = 0
+
     constructor(
         private http: HttpClient
     ){}
