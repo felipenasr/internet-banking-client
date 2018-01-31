@@ -35,3 +35,9 @@
     width: 1px;
     background-color: #303F9F;
 }
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}

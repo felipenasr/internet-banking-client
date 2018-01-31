@@ -46,3 +46,9 @@
 .card-block {
     padding: 15px;
 }
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}

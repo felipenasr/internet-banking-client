@@ -10,7 +10,7 @@
                     <p class="card-receipt-text">Data: {{ data | date:'dd/MM/yyyy - HH:mm:ss' }}</p>
                     <p class="card-receipt-text">Valor: {{ value | currency: 'R$ ' }}</p>
                     <p class="card-receipt-text">Autenticação: {{ hash }}</p>
-                    <a href="#" class="btn btn-primary">Download</a>
+                    <a href="#" class="btn btn-primary no-print" onclick="window.print()">Imprimir</a>
                 </div>
             </div>
         </div>

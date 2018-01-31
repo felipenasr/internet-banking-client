@@ -97,7 +97,7 @@
 	animation: toast 7s ease forwards;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
     text-align: center;
-    z-index: 1;
+    z-index: 1111111111;
 }
 
 .toast-errorfirst-letter {
