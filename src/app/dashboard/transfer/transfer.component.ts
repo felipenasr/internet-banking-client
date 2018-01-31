@@ -33,6 +33,8 @@ export class TransferComponent implements OnInit {
   
   transfer_info = new TransferRes('',false,'','');
 
+  destino_info
+
   ngOnInit() {
   }
 
@@ -43,18 +45,17 @@ export class TransferComponent implements OnInit {
           this.transfer_info = res;
           console.log(this.transfer_info.error)
           if(this.transfer_info.success === true) {
-              // this.http.saldo = Number(this.http.saldo) - Number(this.transfer.value)
-              // this.pubsub.$pub('saldoUpdate', this.transfer.value)
+              //passa saldo para atualizar header
+              this.pubsub.$pub('saldoUpdate', this.transfer.value)
               this.routerLink.navigate(['/dashboard/receipt/'])
-              // Pubsub.publish('SALDO_ATUAL', this.transfer.value)
-              // this.local.set('saldo', this.transfer.value)
               this.jwt.setToken(res.token);
               this.transfer_info.hash = res.hash;
+              //passa para localstorage dados do comprovante
               this.http.post(this._urlDestino,{token: res.token, account: this.transfer.account_number_dest})
-              .subscribe(res => {
-                console.log(res)
-                // Pubsub.publish('DESTINATARIO', res)
-                this.local.set('destinatario', res)
+              .subscribe((dest: any) => {
+                this.local.set('destinatario', dest.name)
+                this.local.set('valor', this.transfer.value)
+                this.local.set('hash', this.transfer_info.hash)
               }
 
               )
