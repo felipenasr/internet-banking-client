@@ -30,6 +30,7 @@
                             <tr>
                                 <th scope="col">#Data</th>
                                 <th scope="col">#Transação</th>
+                                <th scope="col">#Origem</th>
                                 <th scope="col">#Valor</th>
                             </tr>
                         </thead>
@@ -37,6 +38,7 @@
                             <tr *ngFor="let transfer of listaTransfCred">
                                 <td>{{transfer.date.substring(8,10)}}/{{transfer.date.substring(4,7)}}</td>
                                 <td>Crédito</td>
+                                <td>{{transfer.origin}}</td>
                                 <td>R${{transfer.value}},00</td>
                             </tr>
                         </tbody>
@@ -51,6 +53,7 @@
                             <tr>
                                 <th scope="col">#Data</th>
                                 <th scope="col">#Transação</th>
+                                <th scope="col">#Destino</th>
                                 <th scope="col">#Valor</th>
                             </tr>
                         </thead>
@@ -58,6 +61,7 @@
                             <tr *ngFor="let transfer of listaTransfDeb">
                                 <td>{{transfer.date.substring(8,10)}}/{{transfer.date.substring(4,7)}}</td>
                                 <td>Débito</td>
+                                <td>{{transfer.dest}}</td>
                                 <td>R${{transfer.value}},00</td>
                             </tr>
                         </tbody>
