@@ -46,7 +46,7 @@ export class TransferComponent implements OnInit {
           console.log(this.transfer_info.error)
           if(this.transfer_info.success === true) {
               //passa saldo para atualizar header
-              this.pubsub.$pub('saldoUpdate', this.transfer.value)
+              // this.pubsub.$pub('saldoUpdate', this.transfer.value)
               this.routerLink.navigate(['/dashboard/receipt/'])
               this.jwt.setToken(res.token);
               this.transfer_info.hash = res.hash;
@@ -56,6 +56,7 @@ export class TransferComponent implements OnInit {
                 this.local.set('destinatario', dest.name)
                 this.local.set('valor', this.transfer.value)
                 this.local.set('hash', this.transfer_info.hash)
+                this.local.set('conta_destino', this.transfer.account_number_dest)
               }
 
               )

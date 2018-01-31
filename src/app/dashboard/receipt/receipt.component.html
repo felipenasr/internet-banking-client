@@ -5,10 +5,11 @@
                     Comprovante de Transferência
                 </div>
                 <div class="card-block">
-                    <h4 class="card-receipt-title">{{ nomeDestinatario.name }}</h4>
-                    <p class="card-receipt-text">Conta:</p>
-                    <p class="card-receipt-text">Data: 02/02/2018</p>
-                    <p class="card-receipt-text">Valor: R$250,00</p>
+                    <h4 class="card-receipt-title">{{ name }}</h4>
+                    <p class="card-receipt-text">Conta: {{ conta }}</p>
+                    <p class="card-receipt-text">Data: {{ data | date:'dd/MM/yyyy - HH:mm:ss' }}</p>
+                    <p class="card-receipt-text">Valor: {{ value | currency: 'R$ ' }}</p>
+                    <p class="card-receipt-text">Autenticação: {{ hash }}</p>
                     <a href="#" class="btn btn-primary">Download</a>
                 </div>
             </div>
